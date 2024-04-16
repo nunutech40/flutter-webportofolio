@@ -17,37 +17,65 @@ class FirstSectionView extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Flexible(
+          Flexible(
             // untuk membuat text yang menurun ke bawah, gunakan widgets Flexible
             child: Column(
               crossAxisAlignment: CrossAxisAlignment
                   .start, // cross axixaligment digunakan untuk mengatur align isi content dari column rata kiri, kanan, atau tengah
               mainAxisAlignment: MainAxisAlignment
                   .center, // main axis mengatur isi align isi content secara vertical, top, bottom, center
-
               children: [
-                Text(
-                  "Hallo, Saya Rizka Fajar Nugraha",
-                  style: TextStyle(
-                      color: primaryColor,
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold),
+                RichText(
+                  text: const TextSpan(
+                    text: "Hello! ",
+                    style: TextStyle(color: primaryColor, fontSize: 36.0),
+                    children: <TextSpan>[
+                      TextSpan(
+                          text: "I'm Rizka Fajar Nugraha! ",
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      TextSpan(text: "An "),
+                      TextSpan(
+                          text: "Mobile Developer",
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      TextSpan(text: " Based In Jawa Tengah")
+                    ],
+                  ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 4.0,
                 ),
-                Text(
-                  "Seorang Mobile Developer",
-                  style: TextStyle(
-                      color: primaryColor,
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.w500),
+                const Text(
+                    "I have five years experience building mobile app, Android and iOS app. I build Android app with Kotlin and iOS app with Swift. Recently i build cross platform app with Flutter that upload in AppStore and PlayStore. Not only build app to upload in AppStore and PlayStore i build project app with Clean Architecture so it will easy to read and highly maintenance for other programmer that join after it started."),
+                const SizedBox(
+                  height: 16.0,
                 ),
-                SizedBox(
-                  height: 4.0,
-                ),
-                Text(
-                    "Saya memiliki limat tahun pengalaman dalam membuat aplikasi mobile, dengan Flutter sebagai cross platform app, dengan Kotlin untuk Android app dan dengan Swift untuk iOS app. Saya tidak hanya membuat aplikasi mobile yang bisa digunakan, tapi juga merancang kode supaya mudah di maintenance.")
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: primaryColor, // warna background
+                      foregroundColor: Colors.white, // warna textnya
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 18.0, horizontal: 16.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(6.0),
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Text(
+                          "Let's Talk",
+                        ),
+                        const SizedBox(
+                          width: 8.0,
+                        ),
+                        SizedBox(
+                            width: 24,
+                            height: 24,
+                            child:
+                                Image.asset("assets/images/icons8-chat-48.png"))
+                      ],
+                    ))
               ],
             ),
           ),
