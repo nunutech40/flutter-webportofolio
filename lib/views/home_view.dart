@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio/views/first_section_view.dart';
+import 'package:portofolio/views/footer_view.dart';
 import 'package:portofolio/views/second_section_view.dart';
+import 'package:portofolio/views/third_section_view.dart';
 import 'package:portofolio/widgets/navigation_bar/nav_bar.dart';
 
 class HomeView extends StatelessWidget {
@@ -19,6 +21,14 @@ class HomeView extends StatelessWidget {
               children: [
                 FirstSectionView(),
                 SecondSectionView(),
+                SizedBox(
+                  height: 16.0,
+                ),
+                ThirdSectionView(),
+                SizedBox(
+                  height: 16.0,
+                ),
+                FooterView()
               ],
             ),
           ),
