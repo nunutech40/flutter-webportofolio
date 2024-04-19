@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portofolio/views/first_section_view.dart';
+import 'package:portofolio/views/second_section_view.dart';
 import 'package:portofolio/widgets/navigation_bar/nav_bar.dart';
 
 class HomeView extends StatelessWidget {
@@ -11,7 +12,17 @@ class HomeView extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Column(children: [
         NavBar(),
-        FirstSectionView(),
+        Expanded(
+          // expanded berguna untuk memberi tahu vm flutter supaya scretcing pada column yang memiliki item dengan hight masing2
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                FirstSectionView(),
+                SecondSectionView(),
+              ],
+            ),
+          ),
+        )
       ]),
     );
   }

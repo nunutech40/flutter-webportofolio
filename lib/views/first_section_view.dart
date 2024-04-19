@@ -42,10 +42,10 @@ class FirstSectionView extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 4.0,
+                  height: 8.0,
                 ),
                 const Text(
-                    "I have five years experience building mobile app, Android and iOS app. I build Android app with Kotlin and iOS app with Swift. Recently i build cross platform app with Flutter that upload in AppStore and PlayStore. Not only build app to upload in AppStore and PlayStore i build project app with Clean Architecture so it will easy to read and highly maintenance for other programmer that join after it started."),
+                    "I have five years experience building mobile app, Android and iOS app. I build Android app with Kotlin and iOS app with Swift. Recently i build cross platform app with Flutter that upload in AppStore and PlayStore."),
                 const SizedBox(
                   height: 16.0,
                 ),
